@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ScriptWord Translation Services - Our Services">
+    <meta name="theme-color" content="#FF825C">
+    <title>Our Services | ScriptWord Translation Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i|DM+Sans:400,400i,500,500i,700,700i&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .services-page {
+            padding-top: 12rem;
+            padding-bottom: 8rem;
+        }
+        
+        .services-list {
+            margin-top: 5rem;
+        }
+        
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            margin-bottom: 8rem;
+            align-items: center;
+        }
+        
+        .service-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .service-item:nth-child(even) .service-content {
+            direction: ltr;
+        }
+        
+        .service-image {
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .service-content h2 {
+            color: var(--dark-color);
+            margin-bottom: 2rem;
+        }
+        
+        .service-content p {
+            margin-bottom: 2.5rem;
+            color: #666;
+        }
+        
+        .service-content .features {
+            margin-bottom: 3rem;
+        }
+        
+        .service-content .features li {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-content .features li i {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .service-item {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .service-item:nth-child(even) {
+                direction: ltr;
+            }
+            
+            .service-content {
+                order: 2;
+            }
+            
+            .service-image {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="ScriptWord Logo">
+                    </a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="index.html#support">Support</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="cta-button"><a href="contact.html" class="button">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-page">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Our Translation Services</h1>
+                <p>We offer comprehensive language solutions to help bridge cultural and linguistic gaps</p>
+            </div>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="images/service1.jpg" alt="Document Translation">
+                    </div>
+                    <div class="service-content">
+                        <h2>Document Translation</h2>
+                        <p>Our document translation service covers a wide range of materials, from personal documents to business contracts and academic papers. Our team of professional translators ensures accuracy and cultural relevance in every project.</p>
+                        <ul class="features">
+                            <li><i class="fa fa-check-circle"></i> Legal documents (contracts, agreements, patents)</li>
+                            <li><i class="fa fa-check-circle"></i> Academic documents (diplomas, transcripts, research papers)</li>
+                            <li><i class="fa fa-check-circle"></i> Personal documents (birth certificates, marriage licenses)</li>
+                            <li><i class="fa fa-check-circle"></i> Business documents (proposals, reports, presentations)</li>
+                        </ul>
+                        <a href="contact.html" class="button">Request a Quote</a>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="images/service2.jpg" alt="Website Localization">
+                    </div>
+                    <div class="service-content">
+                        <h2>Website Localization</h2>
+                        <p>Expand your global reach with our website localization services. We help businesses adapt their online presence to different markets, ensuring your message resonates with local audiences and drives engagement.</p>
+                        <ul class="features">
+                            <li><i class="fa fa-check-circle"></i> Content translation and cultural adaptation</li>
+                            <li><i class="fa fa-check-circle"></i> SEO optimization for target markets</li>
+                            <li><i class="fa fa-check-circle"></i> UI/UX localization</li>
+                            <li><i class="fa fa-check-circle"></i> Multimedia localization (images, videos, audio)</li>
+                        </ul>
+                        <a href="contact.html" class="button">Request a Quote</a>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="images/service3.jpg" alt="Interpretation Services">
+                    </div>
+                    <div class="service-content">
+                        <h2>Interpretation Services</h2>
+                        <p>Our professional interpreters facilitate real-time communication across language barriers. Whether for business meetings, conferences, or legal proceedings, we provide accurate and culturally sensitive interpretation.</p>
+                        <ul class="features">
+                            <li><i class="fa fa-check-circle"></i> Consecutive interpretation</li>
+                            <li><i class="fa fa-check-circle"></i> Simultaneous interpretation</li>
+                            <li><i class="fa fa-check-circle"></i> In-person and remote options</li>
+                            <li><i class="fa fa-check-circle"></i> Industry-specific interpreters</li>
+                        </ul>
+                        <a href="contact.html" class="button">Request a Quote</a>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="images/service4.jpg" alt="Certified Translation">
+                    </div>
+                    <div class="service-content">
+                        <h2>Certified Translation</h2>
+                        <p>Our certified translation services meet the requirements of government agencies, educational institutions, and legal authorities. Each certified translation includes an official statement attesting to its accuracy and completeness.</p>
+                        <ul class="features">
+                            <li><i class="fa fa-check-circle"></i> Immigration documents</li>
+                            <li><i class="fa fa-check-circle"></i> Legal certificates</li>
+                            <li><i class="fa fa-check-circle"></i> Academic credentials</li>
+                            <li><i class="fa fa-check-circle"></i> Notarized translation options</li>
+                        </ul>
+                        <a href="contact.html" class="button">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" style="background-color: #f9f9f9; padding: 8rem 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 80rem; margin: 0 auto;">
+                <h2>Need a Customized Translation Solution?</h2>
+                <p style="margin-bottom: 3rem;">Our team of language experts is ready to help with your specific requirements. Contact us today to discuss your project.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <a href="contact.html" class="button">Get in Touch</a>
+                    <a href="https://wa.me/123456789" class="whatsapp-button">
+                        <i class="fa fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="ScriptWord Logo">
+                    <p>Professional translation services you can trust.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Document Translation</a></li>
+                        <li><a href="services.html">Website Localization</a></li>
+                        <li><a href="services.html">Interpretation Services</a></li>
+                        <li><a href="services.html">Certified Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa fa-map-marker"></i> 123 Translation St, Toronto, ON</p>
+                    <p><i class="fa fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fa fa-envelope"></i> info@scriptword.com</p>
+                    <a href="https://wa.me/123456789" class="whatsapp-mini">
+                        <i class="fa fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ScriptWord. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
