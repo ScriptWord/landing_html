@@ -40,6 +40,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Process Steps Animation
+    const processSteps = document.querySelectorAll('.process-step');
+    
+    if (processSteps.length > 0) {
+        // Add animation when scrolling to the process section
+        const processObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    processObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+        
+        processSteps.forEach(step => {
+            processObserver.observe(step);
+        });
+    }
+
     // Smooth scrolling for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
