@@ -1,0 +1,10 @@
+# Redirect default Netlify subdomain to primary domain
+# Uncomment and replace with your actual domain when ready
+# https://scriptword-translation.pages.dev/* https://www.scriptword.com/:splat 301!
+
+# Redirect all 404s to the custom 404 page
+/* /404.html 404
+
+# Handle old URLs if needed (examples)
+# /old-services /services.html 301
+# /old-contact-page /contact.html 301 
