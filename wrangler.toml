@@ -1,0 +1,8 @@
+name = "scriptword-translations"
+compatibility_date = "2023-07-10"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "quote-requests"
+database_id = "c1fde2dd-eb63-4981-8eaf-d490d8a54231" 

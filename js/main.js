@@ -114,4 +114,91 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Quote Form File Upload Handling
+    const fileInput = document.getElementById('file-upload');
+    const fileInfo = document.querySelector('.file-info');
+    
+    if (fileInput && fileInfo) {
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length > 0) {
+                fileInfo.textContent = fileInput.files.length + ' file(s) selected';
+            } else {
+                fileInfo.textContent = 'No files selected';
+            }
+        });
+    }
+    
+    // Quote Form Submission
+    const quoteForm = document.getElementById('quote-request-form');
+    const formMessage = document.querySelector('.form-message');
+    
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitButton = quoteForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            try {
+                const formData = new FormData(quoteForm);
+                
+                // Send form data to the Cloudflare Worker
+                const response = await fetch('/api/submit-quote', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                // Display success or error message
+                if (result.success) {
+                    formMessage.textContent = 'Thank you! Your quote request has been submitted successfully.';
+                    formMessage.style.color = '#4caf50';
+                    quoteForm.reset();
+                    document.querySelector('.file-info').textContent = 'No files selected';
+                } else {
+                    formMessage.textContent = result.message || 'There was an error submitting your request. Please try again.';
+                    formMessage.style.color = '#f44336';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                formMessage.textContent = 'There was an error submitting your request. Please try again.';
+                formMessage.style.color = '#f44336';
+            } finally {
+                formMessage.style.display = 'block';
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+
+    // Banner form quote button
+    const bannerQuoteBtn = document.querySelector('.subscribe-form button');
+    if (bannerQuoteBtn) {
+        bannerQuoteBtn.addEventListener('click', function(e) {
+            // Stop form submission if it's in a form
+            e.preventDefault();
+            
+            // Scroll to the quote form section
+            const quoteFormSection = document.getElementById('quote-form');
+            if (quoteFormSection) {
+                window.scrollTo({
+                    top: quoteFormSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Focus on the first input field
+                setTimeout(() => {
+                    const firstInput = quoteFormSection.querySelector('input[name="name"]');
+                    if (firstInput) {
+                        firstInput.focus();
+                    }
+                }, 1000);
+            }
+        });
+    }
 }); 

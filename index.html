@@ -31,7 +31,7 @@
                     <li><a href="#support">Support</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="cta-button"><a href="#contact" class="button">Get Started</a></li>
+                    <li class="cta-button"><a href="#quote-form" class="button">Get Started</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,8 +44,7 @@
                     <h1>Language Solutions That Bridge Worlds</h1>
                     <p>Expert translation services across 80+ languages, certified and trusted by Canadian authorities and global organizations.</p>
                     <div class="subscribe-form">
-                        <input type="email" placeholder="Enter Email Address" aria-label="email">
-                        <button type="submit" class="button">Get A Quote</button>
+                        <a href="#quote-form" class="button">Get A Quote</a>
                     </div>
                 </div>
                 <div class="banner-image">
@@ -66,22 +65,25 @@
                     <div class="icon"><i class="fa fa-file-text-o"></i></div>
                     <h3>Document Translation</h3>
                     <p>Professional translation of documents, certificates, and legal papers.</p>
+                    <a href="#" class="learn-more">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="icon"><i class="fa fa-globe"></i></div>
-                    <h3>Website Localization</h3>
-                    <p>Adapt your website content for international audiences.</p>
+                    <h3>Financial and Business Documents Translation and Localization</h3>
+                    <p>Adapt your Financial and Business Documents for International Audiences or translate them to your target language.</p>
+                    <a href="#" class="learn-more">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="icon"><i class="fa fa-certificate"></i></div>
                     <h3>Certified Translation</h3>
                     <p>Officially certified translations for legal and government purposes.</p>
+                    <a href="#" class="learn-more">Learn More</a>
                 </div>
                 <div class="service-card">
-                    <div class="coming-soon-tag">Coming Soon</div>
                     <div class="icon"><i class="fa fa-comments"></i></div>
-                    <h3>Interpretation Services</h3>
-                    <p>Real-time interpretation for meetings, conferences, and events.</p>
+                    <h3>Technical and Scientific Documents Translation and Localization</h3>
+                    <p>Adapt your Technical and Scientific Documents for International Audiences or translate them to your target language.</p>
+                    <a href="#" class="learn-more">Learn More</a>
                 </div>
             </div>
         </div>
@@ -189,12 +191,12 @@
                         <div class="price">$0.05<span>/word</span></div>
                     </div>
                     <ul class="features">
-                        <li><i class="fa fa-check"></i> Standard translation</li>
+                        <li><i class="fa fa-check"></i> Standard Non Certified Translation</li>
                         <li><i class="fa fa-check"></i> 5 languages</li>
                         <li><i class="fa fa-check"></i> Email support</li>
                         <li><i class="fa fa-check"></i> 72h delivery</li>
                     </ul>
-                    <button class="button">Get Started</button>
+                    <button class="button" onclick="window.location.href='#quote-form'">Get Started</button>
                 </div>
                 <div class="pricing-card professional">
                     <div class="tag">Popular</div>
@@ -203,13 +205,14 @@
                         <div class="price">$0.08<span>/word</span></div>
                     </div>
                     <ul class="features">
-                        <li><i class="fa fa-check"></i> Professional translation</li>
+                        <li><i class="fa fa-check"></i> Professional Non Certified Translation</li>
                         <li><i class="fa fa-check"></i> 20 languages</li>
                         <li><i class="fa fa-check"></i> Priority support</li>
-                        <li><i class="fa fa-check"></i> 48h delivery</li>
+                        <li><i class="fa fa-check"></i> 72h delivery</li>
                         <li><i class="fa fa-check"></i> Quality review</li>
+                        <li><i class="fa fa-check"></i> Notarization Available</li>
                     </ul>
-                    <button class="button">Get Started</button>
+                    <button class="button" onclick="window.location.href='#quote-form'">Get Started</button>
                 </div>
                 <div class="pricing-card premium">
                     <div class="pricing-header">
@@ -217,15 +220,20 @@
                         <div class="price">$0.12<span>/word</span></div>
                     </div>
                     <ul class="features">
-                        <li><i class="fa fa-check"></i> Expert translation</li>
+                        <li><i class="fa fa-check"></i> Expert Certified Translation</li>
                         <li><i class="fa fa-check"></i> 80+ languages</li>
                         <li><i class="fa fa-check"></i> 24/7 support</li>
-                        <li><i class="fa fa-check"></i> 24h delivery</li>
+                        <li><i class="fa fa-check"></i> 48h delivery</li>
                         <li><i class="fa fa-check"></i> Certified translations</li>
                         <li><i class="fa fa-check"></i> Double review</li>
+                        <li><i class="fa fa-check"></i> Notarization Available</li>
                     </ul>
-                    <button class="button">Get Started</button>
+                    <button class="button" onclick="window.location.href='#quote-form'">Get Started</button>
                 </div>
+            </div>
+            <div class="pricing-note">
+                <p>Taxes extra.</p>
+                <p>We accept credit and debit cards, Interac e-transfer, PayPal</p>
             </div>
         </div>
     </section>
@@ -275,6 +283,45 @@
         </div>
     </section>
 
+    <section id="quote-form" class="quote-form">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Request a Quote</h2>
+                <p>for immigration, education, business, and personal needs</p>
+            </div>
+            <div class="quote-form-container">
+                <form id="quote-request-form" class="quote-request-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="first_name" placeholder="First name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" placeholder="Last name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your e-mail*" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="comments" placeholder="What do you need these translations for? Any specific requirements?" rows="3"></textarea>
+                    </div>
+                    <div class="form-group file-upload">
+                        <label for="file-upload" class="custom-file-upload">
+                            <i class="fa fa-cloud-upload"></i> Upload Documents
+                        </label>
+                        <input id="file-upload" name="files" type="file" multiple>
+                        <span class="file-info">No files selected</span>
+                    </div>
+                    <div class="form-group submit-group">
+                        <button type="submit" class="button">Submit Request</button>
+                    </div>
+                    <div class="form-message" style="display: none;"></div>
+                    <p class="form-disclaimer">Submit a request now and get your price quote today</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-content">
@@ -301,9 +348,9 @@
                     <h4>Services</h4>
                     <ul>
                         <li><a href="#">Document Translation</a></li>
-                        <li><a href="#">Website Localization</a></li>
-                        <li><a href="#">Interpretation Services</a></li>
+                        <li><a href="#">Financial and Business Documents Translation and Localization</a></li>
                         <li><a href="#">Certified Translation</a></li>
+                        <li><a href="#">Technical and Scientific Documents Translation and Localization</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
