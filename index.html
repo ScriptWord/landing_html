@@ -9,25 +9,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i|DM+Sans:400,400i,500,500i,700,700i&display=swap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <!-- Alternative CSS paths in case Cloudflare handles paths differently -->
-    <link rel="stylesheet" href="/css/styles.css" type="text/css">
-    <link rel="stylesheet" href="./css/styles.css" type="text/css">
-    <style>
-        /* Fallback styles in case the CSS file doesn't load */
-        body {
-            font-family: 'DM Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="sticky-header">
@@ -389,36 +371,6 @@
 
     <a href="#home" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-    <script>
-        // Check if CSS is loaded properly
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                // Test if CSS loaded properly by checking a class that should have styling
-                const header = document.querySelector('.sticky-header');
-                const computedStyle = window.getComputedStyle(header);
-                
-                // If position isn't fixed, CSS likely didn't load
-                if (computedStyle.position !== 'fixed') {
-                    console.error('CSS may not have loaded properly. Attempting fallback...');
-                    
-                    // Create a new link element with an absolute URL
-                    const cssLink = document.createElement('link');
-                    cssLink.rel = 'stylesheet';
-                    cssLink.type = 'text/css';
-                    cssLink.href = window.location.origin + '/css/styles.css';
-                    document.head.appendChild(cssLink);
-                    
-                    // Or try a different approach with absolute URL
-                    const altCssLink = document.createElement('link');
-                    altCssLink.rel = 'stylesheet';
-                    altCssLink.type = 'text/css';
-                    altCssLink.href = 'https://' + window.location.hostname + '/css/styles.css';
-                    document.head.appendChild(altCssLink);
-                }
-            }, 500); // Small delay to ensure styles have been applied
-        });
-    </script>
-    
     <script src="js/main.js" defer></script>
 </body>
 </html> 
