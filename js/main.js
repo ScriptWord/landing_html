@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(quoteForm);
                 
                 // Send form data to the Cloudflare Worker
-                const response = await fetch('/api/submit-quote', {
+                const response = await fetch('https://' + window.location.hostname + '/api/submit-quote', {
                     method: 'POST',
                     body: formData
                 });
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Banner form quote button
-    const bannerQuoteBtn = document.querySelector('.subscribe-form button');
+    const bannerQuoteBtn = document.querySelector('.subscribe-form a.button');
     if (bannerQuoteBtn) {
         bannerQuoteBtn.addEventListener('click', function(e) {
             // Stop form submission if it's in a form
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Focus on the first input field
                 setTimeout(() => {
-                    const firstInput = quoteFormSection.querySelector('input[name="name"]');
+                    const firstInput = quoteFormSection.querySelector('input[name="first_name"]');
                     if (firstInput) {
                         firstInput.focus();
                     }
@@ -201,4 +201,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Add image error handling
+    const allImages = document.querySelectorAll('img');
+    allImages.forEach(img => {
+        img.addEventListener('error', function() {
+            console.error('Failed to load image:', this.src);
+            // Optional: Replace with a placeholder
+            // this.src = 'images/placeholder.png';
+        });
+    });
 }); 
